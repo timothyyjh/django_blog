@@ -1,0 +1,37 @@
+# Steps to start a django project.
+
+a. Establishing Project
+	1. mkdir <filename>
+	2. cd <filename>
+	3. pipenv install / pipenv install <package_name>
+	
+b. Entering Shell
+	1. pipenv shell
+	2. django-admin startproject storefront . (The fullstop is to use the current directory for the folder instead of making another.)
+	
+c. Starting a server
+	1. python3 manage.py runserver
+
+d. Project structure for urls
+	1.	project directory
+			project urls
+				app directory
+					app urls
+						app views
+							views functions
+								app templates (HTML)
+
+e. To create admin
+	1. python3 manage.py migrate (to establish database (sql))
+	2. python3 manage.py createsuperuser
+
+f. A model is a form of object.
+	1. We declare it with class ModelName(models.Model)
+	2. We call it model because we can save those in the django database.
+	3. models.Model is to inherit the Django model so that Django knows it
+	should be saved in the database.
+	4. python3 manage.py migrate (to establish database (sql))
+	5. python3 manage.py makemigrations <project_name> (to save models into database)
+	6. Model Documentation = https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types
+
+	view > template
